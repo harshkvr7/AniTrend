@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Anime</title>
+
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <a href="https://myanimelist.net/"><img class="mal" src="./images/MyAnimeList_Logo.png"></a>
+        <h1>AniTrends</h1>
+        <a href="https://github.com/harshkvr7/AniTrend"><img class="github" src="./images/github-mark.png"></a>
+    </div>
+
+    <div class="options">
+        <form action="/" id="form" class="form" method="POST">
+            <select name="type" class="form-select">
+                <option value="" data-display="Select">Anime</option>
+                <option value="tv">Tv</option>
+                <option value="movie">Movie</option>
+                <option value="ova">Ova</option>
+                <option value="special">Special</option>
+                <option value="ona">Ona</option>
+                <option value="music">Music</option>
+                <option value="cm">Cm</option>
+                <option value="pv">Pv</option>
+                <option value="tv-special">Tv-Special</option>
+            </select>
+            <select name="filter" class="form-select">
+                <option value="">Rating</option>
+                <option value="airing">Airing</option>
+                <option value="upcoming">Upcoming</option>
+                <option value="bypopularity">Popularity</option>
+                <option value="favorite">Favorite</option>
+            </select>
+            <button type="submit" class="form-submit">Go</button>
+        </form>
+    </div>
+
+    <div class="anime-list">
+        <% for(let i=0 ; i < data.length ; i++){ %>
+            <div class="anime-card">
+
+                <img src=<%=data[i].images.jpg.large_image_url %>>
+
+                <h3>
+                    <% if (locals.data[i].title_english){ %>
+                        <%= data[i].title_english %>
+                            <% }else if(locals.data[i].title_synonyms){ %>
+                                <%= data[i].title_synonyms %>
+                                    <% }else{ %>
+                                        <%= data[i].title %>
+                                            <% } %>
+                </h3>
+
+                <div class="rank"><p>#<%= i+1 %></p></div>
+
+                <a  class="mal-more" href="<%= data[i].url %>"><img class="more" src="./images/MyAnimeList_Logo.png"></a>
+
+                <div class="info">
+
+                    <div class="name element">
+                        <h3>
+                            <% if (locals.data[i].title_english){ %>
+                                <%= data[i].title_english %>
+                                    <% }else if(locals.data[i].title_synonyms){ %>
+                                        <%= data[i].title_synonyms %>
+                                            <% }else{ %>
+                                                <%= data[i].title %>
+                                                    <% } %>
+                        </h3>
+                    </div>
+
+                    <div class="rating element">
+                        <h4>
+                            <%= data[i].score %> ✩ (<%= data[i].scored_by %>)
+                        </h4>
+                    </div>
+
+                    <div class="element episodes">
+                        <h4>
+                            <%= data[i].episodes %> Episodes
+                        </h4>
+                    </div>
+                    <% if(locals.data[i].synopsis){ %>
+                        <div class="synop element">
+                            <p>
+                                <%= data[i].synopsis.slice(0,550) %> ....
+                            </p>
+                        </div>
+                        <% } %>
+                           
+                </div>
+            </div>
+            <div class="anime-vid">
+                <% if(locals.data[i].trailer.embed_url) {%>
+                    <iframe width="500px" height="300px" src="<%= data[i].trailer.embed_url %>">
+                    </iframe>
+                    <% } %>
+            </div>
+            <% } %>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+body {
+    background-image: url(./images/0ecUaq.webp);
+    background-size: cover;
+    margin: 0px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 11;
+}
+.header img{
+    height: 50px;
+}
+.mal{
+    padding-left: 20px;
+}
+.github{
+    filter:brightness(0);
+    padding-right: 20px;
+}
+
+.header h1 {
+    
+    margin: 0px;
+    font-size: 300%;
+    text-shadow: 3px 3px #13131396;
+}
+
+.options{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    margin-top: 100px;
+}
+
+select,button{
+    padding: 15px;
+    font-size: larger;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.486), 0 6px 20px 0 rgba(0, 0, 0, 0.479);
+}
+button{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+    backdrop-filter: blur(5px);
+    box-shadow: none;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.486), 0 6px 20px 0 rgba(0, 0, 0, 0.479);
+}
+button:hover{
+    cursor: pointer;
+}
+
+.anime-list{
+    margin-top: 55px;  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.anime-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    padding-bottom: 5px;
+    background-color: #13131373;
+    max-width: 300px;
+    position: relative;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.486), 0 6px 20px 0 rgba(0, 0, 0, 0.479);
+}
+.anime-vid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    padding-top:0px ;
+    max-width: 300px;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.anime-card img{
+    width: 300px;
+}
+
+.info{
+    background-color: transparent;
+    color: transparent;
+    
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0px;
+    
+}
+.info:hover{
+    background-color: rgba(12, 12, 12, 0.842);
+    color: white;
+    backdrop-filter: blur(4px);
+}
+.element{
+    padding: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.name h3,h4,p{
+    margin: 0px;
+}
+.name{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.rating{
+    padding-bottom:0px ;
+}
+.mal-more{
+    position:absolute;
+    top: 0px;
+    left: 100%;
+    
+}
+.mal-more img{
+    height: 50px;
+    width: 50px;
+}
+.rank{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 50%;
+    font-size: 160%;
+    backdrop-filter: blur(15px);
+    z-index: 5;
+}
