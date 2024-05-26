@@ -20,7 +20,7 @@ body {
     z-index: 11;
 }
 .header img{
-    height: 50px;
+    height: 35px;
 }
 .mal{
     padding-left: 20px;
@@ -71,12 +71,11 @@ button:hover{
 }
 
 .anime-list{
-    margin-top: 55px;  
-
+    margin-top: 55px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
 .anime-card{
     display: flex;
@@ -156,7 +155,7 @@ button:hover{
     position: absolute;
     top: -25px;
     left: -25px;
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: rgba(0, 0, 0, 0.75);
     border-radius: 50%;
     font-size: 160%;
     backdrop-filter: blur(15px);
