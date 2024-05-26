@@ -67,7 +67,7 @@ button{
     outline: none;
     backdrop-filter: blur(5px);
     box-shadow: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.486), 0 6px 20px 0 rgba(0, 0, 0, 0.479);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.487), 0 6px 20px 0 rgba(0, 0, 0, 0.479);
 }
 button:hover{
     cursor: pointer;
