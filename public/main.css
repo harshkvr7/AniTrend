@@ -33,7 +33,7 @@ body {
 .header h1 {
     
     margin: 0px;
-    font-size: 300%;
+    font-size: 200%;
     text-shadow: 3px 3px #13131396;
 }
 
@@ -76,7 +76,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 30px;
 }
 .anime-card{
     display: flex;
